@@ -1,0 +1,52 @@
+.stickyBar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--storm-charcoal);
+  border-top: 1px solid var(--border-dark-light);
+  z-index: 90;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.callButton,
+.scheduleButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  height: 100%;
+  transition: var(--transition-smooth);
+}
+
+.callButton {
+  background: transparent;
+  color: #ffffff;
+  border-right: 1px solid var(--border-dark-light);
+}
+
+.callButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.scheduleButton {
+  background: var(--color-accent-red);
+  color: #ffffff;
+}
+
+.scheduleButton:hover {
+  background: var(--color-accent-red-dark);
+}
+
+/* Show only on small screens */
+@media (max-width: 768px) {
+  .stickyBar {
+    display: flex;
+  }
+}

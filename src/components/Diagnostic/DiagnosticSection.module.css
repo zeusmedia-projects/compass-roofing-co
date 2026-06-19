@@ -1,0 +1,338 @@
+.section {
+  background: var(--storm-charcoal);
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.radarGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(34, 81, 163, 0.15) 0%, rgba(27, 58, 107, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sectionHeader {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent-red);
+  margin-bottom: 16px;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.title {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: var(--text-on-dark-muted);
+  font-size: 16px;
+}
+
+.gridContainer {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  color: #ffffff;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(74, 124, 199, 0.4);
+  transform: translateY(-2px);
+}
+
+.activeCard {
+  background: rgba(34, 81, 163, 0.15) !important;
+  border-color: var(--sky-blue) !important;
+  box-shadow: 0 4px 20px rgba(34, 81, 163, 0.25);
+}
+
+.recommendationCard {
+  border-color: rgba(170, 8, 8, 0.3);
+  background: rgba(170, 8, 8, 0.03);
+}
+
+.recommendationCard:hover {
+  border-color: var(--color-accent-red);
+}
+
+.activeCard.recommendationCard {
+  background: rgba(170, 8, 8, 0.1) !important;
+  border-color: var(--color-accent-red) !important;
+  box-shadow: 0 4px 20px rgba(170, 8, 8, 0.2);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cardLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sky-blue);
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.cardLabelAmber {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-red);
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.cardIcon {
+  color: rgba(255, 255, 255, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.card:hover .cardIcon,
+.activeCard .cardIcon {
+  color: #ffffff;
+}
+
+.activeCard.recommendationCard .cardIcon {
+  color: var(--color-accent-red);
+}
+
+.cardValue {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  font-family: var(--font-montserrat), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.cardSubtitle {
+  font-size: 12px;
+  color: var(--text-on-dark-muted);
+}
+
+/* Detail Panel */
+.detailPanel {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-on-dark);
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border-dark-light);
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.panelTitleContainer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.panelIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: rgba(74, 124, 199, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sky-blue);
+}
+
+.panelEyebrow {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-on-dark-muted);
+  margin-bottom: 4px;
+}
+
+.panelTitle {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.statusBadge {
+  background: rgba(74, 124, 199, 0.1);
+  border: 1px solid rgba(74, 124, 199, 0.2);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--sky-blue);
+}
+
+.badgeAmber {
+  background: rgba(170, 8, 8, 0.1);
+  border-color: rgba(170, 8, 8, 0.3);
+  color: var(--color-accent-red);
+}
+
+.panelContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panelDescription {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.symptomsBox {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.boxTitle {
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.symptomsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.symptomItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bulletIcon {
+  color: var(--color-accent-red);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.impactBox {
+  border-left: 3px solid var(--sky-blue);
+  background: rgba(74, 124, 199, 0.05);
+  padding: 12px 16px;
+  border-radius: 0 6px 6px 0;
+  font-size: 13px;
+}
+
+.panelFooter {
+  border-top: 1px solid var(--border-dark-light);
+  padding-top: 24px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footerNote {
+  font-size: 11px;
+  color: var(--text-on-dark-muted);
+  max-width: 200px;
+  line-height: 1.4;
+}
+
+/* Fallback for mobile devices to prevent backdrop-filter slowdowns */
+@media (max-width: 480px) {
+  .card, .detailPanel {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .detailPanel {
+    padding: 24px;
+  }
+  
+  .panelFooter {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  
+  .footerNote {
+    max-width: 100%;
+    margin-top: 8px;
+  }
+}

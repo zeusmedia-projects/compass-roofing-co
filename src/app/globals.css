@@ -1,0 +1,276 @@
+/* Compass Roofing Design System Tokens & Global Styles */
+
+:root {
+  /* Brand Colors */
+  --compass-blue: #1B3A6B;
+  --storm-blue: #2251A3;
+  --sky-blue: #4A7CC7;
+  --warm-white: #F8F7F4;
+  --soft-gray: #E8E6E1;
+  --storm-charcoal: #1A1C22;
+  --deep-charcoal: #111318;
+  --brushed-silver: #8A8E99;
+  --metallic-light: #C4C8D4;
+  --color-accent-red: #AA0808;
+  --color-accent-red-dark: #660404;
+  --color-action-red: #D60000;
+  --color-brushed-silver: #8A8E99;
+  --color-metallic-light: #C4C8D4;
+  --signal-amber: var(--color-accent-red); /* Keep as fallback alias, mapping to deep red */
+  
+  /* Text Colors */
+  --body-text: #2C2E35;
+  --text-muted: #5A5E6B;
+  --text-light: #8A8E99;
+  --text-on-dark: rgba(255, 255, 255, 0.9);
+  --text-on-dark-muted: rgba(255, 255, 255, 0.6);
+  
+  /* Borders */
+  --border-light: rgba(27, 58, 107, 0.12);
+  --border-medium: rgba(27, 58, 107, 0.22);
+  --border-dark-light: rgba(255, 255, 255, 0.08);
+  --border-dark-medium: rgba(255, 255, 255, 0.15);
+  --border-metallic: 1px solid var(--brushed-silver);
+  
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 80px;
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--warm-white);
+  color: var(--body-text);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-inter), 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* Typography Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), 'Segoe UI', sans-serif;
+  color: var(--compass-blue);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 16px;
+  color: var(--body-text);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+  position: relative;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  font-family: var(--font-montserrat), sans-serif;
+  border: none;
+  gap: 8px;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--color-accent-red);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(170, 8, 8, 0.25);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--compass-blue);
+  border: 2px solid var(--compass-blue);
+}
+
+.btn-secondary:hover {
+  background: rgba(27, 58, 107, 0.05);
+  transform: translateY(-2px);
+}
+
+.btn-ghost-light {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-ghost-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+  background: rgba(26, 28, 34, 0.75);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: var(--text-on-dark);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(27, 58, 107, 0.08);
+  border-radius: 10px;
+  color: var(--body-text);
+}
+
+/* Fallback for mobile devices to prevent performance issues with backdrop-filter */
+@media (max-width: 480px) {
+  .glass-card {
+    background: #1e2129 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  .glass-card-light {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+/* Blueprint overlay backgrounds */
+.blueprint-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(27, 58, 107, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 58, 107, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.blueprint-overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--warm-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brushed-silver);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 26px;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+}

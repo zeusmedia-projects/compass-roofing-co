@@ -1,0 +1,266 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  background: var(--storm-charcoal);
+  color: #ffffff;
+  padding: 140px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--sky-blue);
+  margin-bottom: 24px;
+}
+
+.backLink:hover {
+  color: #ffffff;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-metallic-light);
+  margin-bottom: 12px;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-on-dark-muted);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Content Layout */
+.contentSection {
+  padding: 80px 0;
+  background: var(--warm-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.mainCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--compass-blue);
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 8px;
+}
+
+.text {
+  font-size: 15px;
+  color: var(--body-text);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.specBox {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--sky-blue);
+  border-radius: 4px;
+  padding: 24px;
+  margin: 32px 0;
+}
+
+.specBoxTitle {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+
+.lifespanVal {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--compass-blue);
+  font-family: var(--font-montserrat), sans-serif;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.specBoxText {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.symptomsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.symptomItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.bulletIcon {
+  color: var(--color-accent-red);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.specsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.specItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.checkIcon {
+  color: var(--sky-blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ctaBox {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 4px 25px rgba(27, 58, 107, 0.04);
+}
+
+.ctaTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--compass-blue);
+  margin-bottom: 12px;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.ctaText {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.phoneLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--compass-blue);
+}
+
+/* FAQ Block */
+.faqBlock {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid var(--border-light);
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.faqItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faqQuestion {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--compass-blue);
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.faqAnswer {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 0 60px;
+  }
+  
+  .title {
+    font-size: 30px;
+  }
+  
+  .faqGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

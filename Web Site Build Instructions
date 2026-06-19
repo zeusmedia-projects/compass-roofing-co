@@ -1,0 +1,1208 @@
+< !DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Compass Roofing — Brand Elevation & Website Strategy</title><style> :root {
+    --compass-blue: #1B3A6B;
+    --storm-blue: #2251A3;
+    --sky-blue: #4A7CC7;
+    --warm-white: #F8F7F4;
+    --soft-gray: #E8E6E1;
+    --storm-charcoal: #1A1C22;
+    --deep-charcoal: #111318;
+    --brushed-silver: #8A8E99;
+    --metallic-light: #C4C8D4;
+    --signal-amber: #D4870A;
+    --amber-light: #F5A623;
+    --body-text: #2C2E35;
+    --text-muted: #5A5E6B;
+    --text-light: #8A8E99;
+    --border-light: rgba(27, 58, 107, 0.12);
+    --border-medium: rgba(27, 58, 107, 0.22);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--warm-white);
+    color: var(--body-text);
+    line-height: 1.65;
+    font-size: 15px;
+}
+
+/* ── COVER ── */
+.cover {
+    background: var(--deep-charcoal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 80px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(34, 81, 163, 0.18) 0%, rgba(27, 58, 107, 0.08) 100%);
+    border-left: 1px solid rgba(196, 200, 212, 0.08);
+}
+
+.cover-compass {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cover-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--signal-amber);
+    margin-bottom: 20px;
+}
+
+.cover h1 {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.08;
+    color: #fff;
+    max-width: 620px;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.cover h1 span {
+    color: var(--sky-blue);
+}
+
+.cover-sub {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 500px;
+    line-height: 1.7;
+    margin-bottom: 56px;
+}
+
+.cover-meta {
+    display: flex;
+    gap: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 32px;
+    width: 100%;
+    max-width: 620px;
+}
+
+.cover-meta-item label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.cover-meta-item span {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+/* ── LAYOUT ── */
+.doc-body {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 48px 120px;
+}
+
+/* ── CHAPTER HEADER ── */
+.chapter {
+    padding: 80px 0 0;
+    border-top: 2px solid var(--compass-blue);
+    margin-top: 80px;
+}
+
+.chapter:first-of-type {
+    margin-top: 0;
+    border-top: none;
+}
+
+.chapter-num {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--signal-amber);
+    margin-bottom: 12px;
+}
+
+.chapter h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--compass-blue);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    line-height: 1.1;
+}
+
+.chapter-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 640px;
+}
+
+/* ── SECTION HEADER ── */
+.section-head {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--compass-blue);
+    margin: 48px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* ── PROSE ── */
+p {
+    margin-bottom: 16px;
+    color: var(--body-text);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+strong {
+    font-weight: 700;
+    color: var(--compass-blue);
+}
+
+/* ── CALLOUT BLOCK ── */
+.callout {
+    background: rgba(27, 58, 107, 0.05);
+    border-left: 3px solid var(--compass-blue);
+    padding: 20px 24px;
+    border-radius: 0 8px 8px 0;
+    margin: 24px 0;
+}
+
+.callout.amber {
+    background: rgba(212, 135, 10, 0.06);
+    border-left-color: var(--signal-amber);
+}
+
+.callout.dark {
+    background: var(--storm-charcoal);
+    border-left-color: var(--sky-blue);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.callout.dark strong {
+    color: var(--sky-blue);
+}
+
+.callout-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--signal-amber);
+    margin-bottom: 8px;
+}
+
+.callout p {
+    margin-bottom: 0;
+}
+
+/* ── GRID CARDS ── */
+.card-grid {
+    display: grid;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.card-grid.col2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-grid.col3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-grid.col4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 20px 22px;
+}
+
+.card-dark {
+    background: var(--storm-charcoal);
+    border: 1px solid rgba(196, 200, 212, 0.1);
+    border-radius: 10px;
+    padding: 20px 22px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.card h4,
+.card-dark h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.card h4 {
+    color: var(--compass-blue);
+}
+
+.card-dark h4 {
+    color: var(--sky-blue);
+}
+
+.card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.card-dark p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── COLOR SWATCHES ── */
+.palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.swatch {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 100px;
+}
+
+.swatch-color {
+    width: 100%;
+    height: 52px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.swatch-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--body-text);
+    line-height: 1.3;
+}
+
+.swatch-hex {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+/* ── TYPOGRAPHY SAMPLES ── */
+.type-sample {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin: 16px 0;
+}
+
+.type-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.type-display {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--compass-blue);
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+}
+
+.type-h2 {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--compass-blue);
+    margin-top: 16px;
+}
+
+.type-body-sample {
+    font-size: 15px;
+    color: var(--body-text);
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+/* ── SITEMAP TREE ── */
+.sitemap {
+    margin: 24px 0;
+}
+
+.sitemap-root {
+    background: var(--compass-blue);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.sitemap-branch {
+    margin-left: 28px;
+    border-left: 2px solid var(--border-medium);
+    padding-left: 20px;
+}
+
+.sitemap-branch+.sitemap-branch {
+    margin-top: 8px;
+}
+
+.sitemap-page {
+    font-size: 12px;
+    color: var(--text-muted);
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sitemap-page::before {
+    content: '';
+    width: 8px;
+    height: 1px;
+    background: var(--border-medium);
+    flex-shrink: 0;
+}
+
+.sitemap-branch-head {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--compass-blue);
+    margin: 12px 0 4px;
+}
+
+/* ── PAGE WIREFRAME ── */
+.wireframe {
+    background: var(--soft-gray);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 24px;
+    margin: 24px 0;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.wf-bar {
+    background: var(--storm-charcoal);
+    height: 44px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    gap: 12px;
+}
+
+.wf-hero {
+    background: linear-gradient(135deg, #111318 0%, #1B3A6B 100%);
+    height: 180px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.wf-hero-h1 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.wf-hero-sub {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 12px;
+}
+
+.wf-cta-row {
+    display: flex;
+    gap: 8px;
+}
+
+.wf-cta-primary {
+    background: var(--signal-amber);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+.wf-cta-ghost {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+.wf-proof {
+    height: 48px;
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 16px;
+    border: 1px solid var(--border-light);
+}
+
+.wf-proof-item {
+    text-align: center;
+}
+
+.wf-proof-val {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--compass-blue);
+}
+
+.wf-proof-lbl {
+    font-size: 9px;
+    color: var(--text-muted);
+}
+
+.wf-section {
+    background: #fff;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 4px;
+    border: 1px solid var(--border-light);
+}
+
+.wf-section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.wf-cards {
+    display: flex;
+    gap: 6px;
+}
+
+.wf-card {
+    flex: 1;
+    height: 56px;
+    background: var(--soft-gray);
+    border-radius: 4px;
+    border: 1px solid var(--border-light);
+}
+
+.wf-dark-section {
+    background: var(--storm-charcoal);
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 4px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+}
+
+/* ── LOGO CONCEPTS ── */
+.logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.logo-concept {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-concept-dark {
+    background: var(--deep-charcoal);
+    border: 1px solid rgba(196, 200, 212, 0.1);
+    border-radius: 10px;
+    padding: 28px;
+}
+
+.logo-concept-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-top: 16px;
+}
+
+.logo-concept-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--compass-blue);
+    margin-top: 4px;
+}
+
+/* ── CTA COMPONENTS ── */
+.btn-primary {
+    display: inline-block;
+    background: var(--signal-amber);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    margin-right: 8px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--compass-blue);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 11px 24px;
+    border-radius: 6px;
+    border: 2px solid var(--compass-blue);
+    cursor: pointer;
+}
+
+.btn-ghost-light {
+    display: inline-block;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 24px;
+    border-radius: 6px;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+/* ── SEO PILLAR ── */
+.seo-pillar {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 16px 0;
+}
+
+.seo-pillar-head {
+    background: var(--compass-blue);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.seo-pillar-head span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.seo-pillar-body {
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.kw-tag {
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--soft-gray);
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* ── PROCESS STEP ── */
+.process-steps {
+    counter-reset: step;
+    margin: 24px 0;
+}
+
+.process-step {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--compass-blue);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.step-body h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--compass-blue);
+    margin-bottom: 4px;
+}
+
+.step-body p {
+    font-size: 13px;
+    margin: 0;
+}
+
+/* ── TAG ── */
+.tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 3px;
+    margin-right: 4px;
+}
+
+.tag-blue {
+    background: rgba(27, 58, 107, 0.1);
+    color: var(--compass-blue);
+}
+
+.tag-amber {
+    background: rgba(212, 135, 10, 0.1);
+    color: var(--signal-amber);
+}
+
+.tag-gray {
+    background: var(--soft-gray);
+    color: var(--text-muted);
+}
+
+/* ── LIST ── */
+.check-list {
+    list-style: none;
+    margin: 16px 0;
+}
+
+.check-list li {
+    padding: 7px 0 7px 26px;
+    position: relative;
+    font-size: 14px;
+    color: var(--body-text);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.check-list li:last-child {
+    border-bottom: none;
+}
+
+.check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--signal-amber);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+/* ── COPY BLOCK ── */
+.copy-block {
+    background: var(--storm-charcoal);
+    border-radius: 10px;
+    padding: 32px 36px;
+    margin: 24px 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.copy-block .eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--signal-amber);
+    margin-bottom: 12px;
+}
+
+.copy-block h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    line-height: 1.15;
+}
+
+.copy-block p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* ── ANTIGRAVITY PROMPT ── */
+.prompt-block {
+    background: #0D1117;
+    border-radius: 12px;
+    padding: 40px 44px;
+    margin: 32px 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.82);
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.prompt-block .ph {
+    color: #79C0FF;
+    font-weight: 700;
+}
+
+.prompt-block .pk {
+    color: #F0883E;
+}
+
+.prompt-block .pv {
+    color: #A5D6FF;
+}
+
+.prompt-block .pc {
+    color: rgba(255, 255, 255, 0.3);
+    font-style: italic;
+}
+
+/* ── DIVIDER ── */
+.divider {
+    border: none;
+    border-top: 1px solid var(--border-light);
+    margin: 40px 0;
+}
+
+/* ── TABLE OF CONTENTS ── */
+.toc {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin: 40px 0;
+}
+
+.toc h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+.toc-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+}
+
+.toc-item {
+    font-size: 13px;
+    color: var(--compass-blue);
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toc-item .n {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-light);
+    min-width: 22px;
+}
+
+/* ── METRIC CARDS ── */
+.metric-row {
+    display: flex;
+    gap: 12px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.metric-card {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 16px 20px;
+    flex: 1;
+    min-width: 120px;
+}
+
+.metric-val {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--compass-blue);
+    letter-spacing: -0.02em;
+}
+
+.metric-lbl {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+    .cover {
+        padding: 48px 28px 48px;
+    }
+
+    .cover h1 {
+        font-size: 34px;
+    }
+
+    .doc-body {
+        padding: 0 24px 80px;
+    }
+
+    .card-grid.col2,
+    .card-grid.col3,
+    .card-grid.col4,
+    .logo-grid,
+    .toc-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style></head><body>< !-- COVER --><div class="cover"><svg class="cover-compass" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="28" r="27" stroke="rgba(74,124,199,0.4)" stroke-width="1" /><circle cx="28" cy="28" r="22" stroke="rgba(74,124,199,0.2)" stroke-width="0.5" /><polygon points="28,6 32,28 28,24 24,28" fill="#4A7CC7" /><polygon points="28,50 32,28 28,32 24,28" fill="rgba(255,255,255,0.2)" /><polygon points="6,28 28,24 24,28 28,32" fill="rgba(255,255,255,0.15)" /><polygon points="50,28 28,24 32,28 28,32" fill="rgba(255,255,255,0.1)" /><circle cx="28" cy="28" r="2.5" fill="#D4870A" /><line x1="28" y1="10" x2="28" y2="14" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" /><line x1="28" y1="42" x2="28" y2="46" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" /><line x1="10" y1="28" x2="14" y2="28" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" /><line x1="42" y1="28" x2="46" y2="28" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" /></svg><div class="cover-eyebrow">Zeus Media — Brand Elevation Strategy</div><h1>Compass Roofing<br><span>Website & Brand</span><br>Elevation System</h1><div class="cover-sub">A complete strategy for elevating Compass Roofing from a trusted mid-level contractor to a premium,
+conversion-ready South Florida roofing brand — without losing the local identity they've already built.</div>
+ <div class="cover-meta"><div class="cover-meta-item"><label>Client</label><span>Compass Roofing</span></div><div class="cover-meta-item"><label>Market</label><span>South Florida / Broward County</span></div><div class="cover-meta-item"><label>Prepared by</label><span>Zeus Media</span></div><div class="cover-meta-item"><label>Type</label><span>Brand Elevation+Website Strategy</span></div></div></div>< !-- DOCUMENT BODY --><div class="doc-body">< !-- TOC --><div style="padding-top: 60px;"><div class="toc"><h3>Contents</h3><div class="toc-items"><div class="toc-item"><span class="n">01</span>Brand Elevation Summary</div><div class="toc-item"><span class="n">02</span>Positioning & Core Idea</div><div class="toc-item"><span class="n">03</span>Logo Redesign Direction</div><div class="toc-item"><span class="n">04</span>Color & Material System</div><div class="toc-item"><span class="n">05</span>Typography System</div><div class="toc-item"><span class="n">06</span>Homepage Wireframe</div><div class="toc-item"><span class="n">07</span>Full Sitemap</div><div class="toc-item"><span class="n">08</span>Page Templates</div><div class="toc-item"><span class="n">09</span>Component Library</div><div class="toc-item"><span class="n">10</span>SEO Architecture</div><div class="toc-item"><span class="n">11</span>Conversion & CTA System</div><div class="toc-item"><span class="n">12</span>Image Direction</div><div class="toc-item"><span class="n">13</span>Copy Blocks</div><div class="toc-item"><span class="n">14</span>Mobile Requirements</div><div class="toc-item"><span class="n">15</span>Tracking & Analytics</div><div class="toc-item"><span class="n">16</span>Antigravity Build Prompt</div></div></div></div>< !-- ── 01 BRAND ELEVATION SUMMARY ── --><div class="chapter"><div class="chapter-num">01</div><h2>Brand Elevation Summary</h2><div class="chapter-sub">Preserve what's been earned. Sharpen what needs work. Build what' s missing.</div><div class="callout dark"><div class="callout-label">Core Directive</div><p>This is not a rebrand. Compass Roofing has real equity — a recognizable name,
+an established color family,
+and a real track record in the South Florida market. The opportunity is to make the brand experience reflect the level of professionalism that clients need when making a $15,
+000–$80,
+000 roofing decision.</p></div><div class="section-head">What We Keep</div><div class="card-grid col3"><div class="card"><h4>Company Name</h4><p>Compass Roofing is strong. Clear,
+directional,
+roofing-specific. No change needed.</p></div><div class="card"><h4>Color Family</h4><p>Blue,
+white,
+and gray are right for the market. We modernize the treatment,
+not the direction.</p></div><div class="card"><h4>Local Identity</h4><p>South Florida roofing company. Broward County trusted. That stays front and center.</p></div><div class="card"><h4>Service Offering</h4><p>Repair,
+replacement,
+flat,
+coatings,
+residential,
+commercial. Proven service mix,
+kept intact.</p></div><div class="card"><h4>Market Position</h4><p>Local contractor with residential and commercial capability. We elevate,
+not pivot.</p></div><div class="card"><h4>Trust Foundation</h4><p>Reviews,
+longevity,
+past work. This gets amplified and better displayed,
+not erased.</p></div></div><div class="section-head">What We Upgrade</div><div class="card-grid col3"><div class="card"><h4>Logo System</h4><p>Evolve to a geometric,
+structural,
+versatile mark that works on trucks,
+signs,
+and screens.</p></div><div class="card"><h4>Website Architecture</h4><p>Build a real SEO-ready content structure with service,
+location,
+and project pages.</p></div><div class="card"><h4>Typography</h4><p>Montserrat Bold for display,
+Inter for body. Clean,
+readable,
+modern.</p></div><div class="card"><h4>Material Treatment</h4><p>Storm blue glass,
+brushed aluminum,
+metallic borders — roofing-specific material language.</p></div><div class="card"><h4>Conversion System</h4><p>Inspection-first CTAs,
+multi-step forms,
+sticky mobile call,
+lead routing by service type.</p></div><div class="card"><h4>Proof Sections</h4><p>Project galleries,
+review cards,
+local service area maps — all surfaced prominently.</p></div></div></div>< !-- ── 02 POSITIONING ── --><div class="chapter"><div class="chapter-num">02</div><h2>Positioning & Core Idea</h2><div class="chapter-sub">One idea. Every page reinforces it.</div><div class="copy-block"><div class="eyebrow">Primary Brand Idea</div><h3>"Know Where Your Roof Stands." </h3><p>Most homeowners delay roofing decisions because they don't know if they need a $500 repair or a $25,000 replacement. Compass Roofing removes that anxiety with clear inspections, honest recommendations, and a team that explains the real situation before asking for a commitment.</p>
+ <div class="btn-primary">Schedule Roof Inspection</div><div class="btn-ghost-light">Explore Services</div></div><div class="section-head">Supporting Lines</div><div class="card-grid col2"><div class="card"><h4>Primary Supporting Line</h4><p>"Clear Direction. Stronger Roofs." — Used in headers,
+email signatures,
+and truck graphics alongside the primary idea.</p></div><div class="card"><h4>Storm-Ready Variant</h4><p>"Storm-Ready Roofing With Clear Direction." — Used seasonally,
+in hurricane-prep content,
+and in South Florida weather messaging.</p></div></div><div class="section-head">Brand Promise</div><div class="callout"><p>Compass Roofing helps South Florida homeowners and property owners understand the condition of their roof,
+choose the right next step,
+and protect their property with dependable repair,
+replacement,
+coating,
+inspection,
+and commercial roofing solutions.</p></div><div class="section-head">Brand Personality</div><div class="card-grid col4"><div class="card"><h4>Clear</h4><p>No jargon. No filler. Straight answers about what the roof actually needs.</p></div><div class="card"><h4>Protective</h4><p>The brand exists to shield South Florida property. That purpose runs through every touchpoint.</p></div><div class="card"><h4>Premium</h4><p>Not flashy — organized,
+professional,
+and worthy of a significant purchase decision.</p></div><div class="card"><h4>Local</h4><p>South Florida isn't a backdrop. It' s the operating environment. Hurricane season is real here.</p></div></div></div>< !-- ── 03 LOGO REDESIGN ── --><div class="chapter"><div class="chapter-num">03</div><h2>Logo Redesign Direction</h2><div class="chapter-sub">A structural,
+versatile mark system that works everywhere from business cards to 30-foot truck wraps.</div><div class="section-head">Preferred Concept: Structural C with Compass Needle</div><div class="logo-grid"><div class="logo-concept">< !-- SVG LOGO CONCEPT A: Structural C --><svg width="220" height="72" viewBox="0 0 220 72" fill="none" xmlns="http://www.w3.org/2000/svg">< !-- C mark --><path d="M38 12 A28 28 0 1 0 38 60 L38 50 A18 18 0 1 1 38 22 Z" fill="#1B3A6B" />< !-- Compass needle in negative space --><polygon points="36,20 40,36 36,32 32,36" fill="#D4870A" /><polygon points="36,52 40,36 36,40 32,36" fill="rgba(27,58,107,0.25)" />< !-- Wordmark --><text x="72" y="32" font-family="Montserrat, sans-serif" font-weight="800" font-size="16" fill="#1B3A6B" letter-spacing="-0.5">COMPASS</text><text x="72" y="52" font-family="Montserrat, sans-serif" font-weight="400" font-size="12" fill="#5A5E6B" letter-spacing="2">ROOFING</text>< !-- Small roof line accent --><path d="M72 57 L220 57" stroke="rgba(27,58,107,0.15)" stroke-width="0.5" /></svg><div class="logo-concept-label">Concept A — Light Background</div><div class="logo-concept-name">Structural C+Compass Needle</div></div><div class="logo-concept-dark">< !-- Dark version --><svg width="220" height="72" viewBox="0 0 220 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M38 12 A28 28 0 1 0 38 60 L38 50 A18 18 0 1 1 38 22 Z" fill="white" /><polygon points="36,20 40,36 36,32 32,36" fill="#D4870A" /><polygon points="36,52 40,36 36,40 32,36" fill="rgba(255,255,255,0.2)" /><text x="72" y="32" font-family="Montserrat, sans-serif" font-weight="800" font-size="16" fill="white" letter-spacing="-0.5">COMPASS</text><text x="72" y="52" font-family="Montserrat, sans-serif" font-weight="400" font-size="12" fill="rgba(255,255,255,0.5)" letter-spacing="2">ROOFING</text><path d="M72 57 L220 57" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" /></svg><div style="font-size:10px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-top:16px;">Concept A — Dark Background</div><div style="font-size:14px; font-weight:700; color:rgba(255,255,255,0.8); margin-top:4px;">Storm Charcoal Version</div></div></div><div class="section-head">Alternative Logo Concepts</div><div class="card-grid col3"><div class="card"><svg width="100%" height="64" viewBox="0 0 200 64" fill="none">< !-- Concept B: Compass Roofline Circle --><circle cx="32" cy="32" r="26" stroke="#1B3A6B" stroke-width="2" fill="none" /><path d="M32 10 L46 28 L18 28 Z" fill="#1B3A6B" /><polygon points="32,8 34,24 32,20 30,24" fill="#D4870A" /><text x="68" y="28" font-family="Montserrat, sans-serif" font-weight="800" font-size="13" fill="#1B3A6B">COMPASS</text><text x="68" y="46" font-family="Montserrat, sans-serif" font-weight="400" font-size="10" fill="#5A5E6B" letter-spacing="1.5">ROOFING</text></svg><div class="logo-concept-label">Concept B</div><div class="logo-concept-name">Compass Roofline Circle</div></div><div class="card"><svg width="100%" height="64" viewBox="0 0 200 64" fill="none">< !-- Concept C: Shield --><path d="M32 6 L56 16 L56 36 Q56 52 32 60 Q8 52 8 36 L8 16 Z" fill="#1B3A6B" /><path d="M32 14 L44 22 L20 22 Z" fill="white" opacity="0.9" /><polygon points="32,12 34,22 32,19 30,22" fill="#D4870A" /><text x="68" y="28" font-family="Montserrat, sans-serif" font-weight="800" font-size="13" fill="#1B3A6B">COMPASS</text><text x="68" y="46" font-family="Montserrat, sans-serif" font-weight="400" font-size="10" fill="#5A5E6B" letter-spacing="1.5">ROOFING</text></svg><div class="logo-concept-label">Concept C</div><div class="logo-concept-name">Storm Shield Mark</div></div><div class="card"><svg width="100%" height="64" viewBox="0 0 200 64" fill="none">< !-- Concept D: Standing Seam Metal Roof+Arrow --><path d="M8 38 L20 18 L32 26 L44 18 L56 38 Z" fill="none" stroke="#1B3A6B" stroke-width="2.5" stroke-linejoin="round" /><path d="M20 18 L20 38" stroke="#8A8E99" stroke-width="1" opacity="0.5" /><path d="M32 26 L32 38" stroke="#8A8E99" stroke-width="1" opacity="0.5" /><path d="M44 18 L44 38" stroke="#8A8E99" stroke-width="1" opacity="0.5" /><polygon points="32,10 35,20 32,17 29,20" fill="#D4870A" /><text x="68" y="28" font-family="Montserrat, sans-serif" font-weight="800" font-size="13" fill="#1B3A6B">COMPASS</text><text x="68" y="46" font-family="Montserrat, sans-serif" font-weight="400" font-size="10" fill="#5A5E6B" letter-spacing="1.5">ROOFING</text></svg><div class="logo-concept-label">Concept D</div><div class="logo-concept-name">Standing-Seam Metal Roof</div></div></div><div class="section-head">Logo System Requirements</div><div class="card-grid col2"><div class="card"><h4>Required Versions</h4><ul class="check-list"><li>Primary horizontal logo (mark + wordmark)</li><li>Stacked logo (mark above wordmark)</li><li>Icon-only mark</li><li>Dark background version</li><li>One-color version (all blue, all white)</li><li>Social profile version (square crop, icon mark)</li><li>Truck/signage version (high contrast, bold)</li></ul></div><div class="card"><h4>Application Notes</h4><ul class="check-list"><li>Minimum size: 120px wide on screen,
+1.5" wide in print</li>
+ <li>Clear space: equal to the height of the "C" mark on all sides</li><li>Never stretch,
+rotate,
+or recolor outside brand palette</li><li>Amber accent (compass needle) is a brand signal — never remove it</li><li>On photography,
+use white version with semi-opaque overlay if needed</li><li>Metallic silver treatment available for premium print applications</li></ul></div></div></div>< !-- ── 04 COLOR & MATERIAL ── --><div class="chapter"><div class="chapter-num">04</div><h2>Color & Material System</h2><div class="chapter-sub">Roofing-specific material treatment. Every color decision maps to a real material or condition in the Compass Roofing world.</div><div class="section-head">Primary Palette</div><div class="palette"><div class="swatch"><div class="swatch-color" style="background:#1B3A6B;"></div><div class="swatch-label">Compass Blue</div><div class="swatch-hex">#1B3A6B</div></div><div class="swatch"><div class="swatch-color" style="background:#2251A3;"></div><div class="swatch-label">Storm Blue</div><div class="swatch-hex">#2251A3</div></div><div class="swatch"><div class="swatch-color" style="background:#4A7CC7;"></div><div class="swatch-label">Sky Blue</div><div class="swatch-hex">#4A7CC7</div></div><div class="swatch"><div class="swatch-color" style="background:#F8F7F4; border:1px solid #E0DDD7;"></div><div class="swatch-label">Warm White</div><div class="swatch-hex">#F8F7F4</div></div><div class="swatch"><div class="swatch-color" style="background:#E8E6E1;"></div><div class="swatch-label">Soft Gray</div><div class="swatch-hex">#E8E6E1</div></div></div><div class="section-head">Secondary & Accent Palette</div><div class="palette"><div class="swatch"><div class="swatch-color" style="background:#1A1C22;"></div><div class="swatch-label">Storm Charcoal</div><div class="swatch-hex">#1A1C22</div></div><div class="swatch"><div class="swatch-color" style="background:#111318;"></div><div class="swatch-label">Deep Charcoal</div><div class="swatch-hex">#111318</div></div><div class="swatch"><div class="swatch-color" style="background:#8A8E99;"></div><div class="swatch-label">Brushed Silver</div><div class="swatch-hex">#8A8E99</div></div><div class="swatch"><div class="swatch-color" style="background:#C4C8D4;"></div><div class="swatch-label">Metallic Light</div><div class="swatch-hex">#C4C8D4</div></div><div class="swatch"><div class="swatch-color" style="background:#D4870A;"></div><div class="swatch-label">Signal Amber</div><div class="swatch-hex">#D4870A</div></div></div><div class="section-head">Material Language</div><div class="card-grid col3"><div class="card-dark"><h4>Storm Blue Glass</h4><p>Deep blue-tinted frosted panels. Used for hero overlays,
+diagnostic cards,
+and premium info sections.</p></div><div class="card-dark"><h4>Brushed Aluminum</h4><p>Silver-gray metallic treatment. Applied to borders,
+card edges,
+and decorative dividers.</p></div><div class="card-dark"><h4>Standing-Seam Metal</h4><p>Vertical line patterns referencing metal roof panels. Used subtly in backgrounds and section dividers.</p></div><div class="card-dark"><h4>TPO/Flat Membrane</h4><p>Clean white-gray surface texture. Referenced in commercial roofing sections and flat roof content.</p></div><div class="card-dark"><h4>Storm Radar Glow</h4><p>Radial gradient in storm blue. Used sparingly in hero backgrounds and weather-related sections.</p></div><div class="card-dark"><h4>Compass Grid Overlay</h4><p>Subtle crosshatch or grid pattern. Used in hero backgrounds as a structural blueprint reference.</p></div></div><div class="callout amber"><div class="callout-label">Amber Usage Rule</div><p><strong>Signal Amber is used sparingly.</strong>Primary CTA buttons,
+compass needle in logo,
+inspection highlights,
+warning callouts. It should feel like a directional signal,
+not a brand color. Maximum one amber element per viewport section at a time.</p></div></div>< !-- ── 05 TYPOGRAPHY ── --><div class="chapter"><div class="chapter-num">05</div><h2>Typography System</h2><div class="chapter-sub">Two faces. Clear hierarchy. Every weight earns its place.</div><div class="type-sample"><div class="type-label">Display / H1 — Montserrat Bold</div><div class="type-display">Know Where Your Roof Stands</div><div style="margin-top:8px; font-size:12px; color:var(--text-light);">Montserrat 800 · 48–64px · Letter-spacing -0.025em · Title Case</div></div><div class="type-sample"><div class="type-label">H2 Section Headers — Montserrat Bold</div><div class="type-h2">Roofing Services With A Clear Path Forward</div><div style="margin-top:8px; font-size:12px; color:var(--text-light);">Montserrat 700 · 28–36px · Letter-spacing -0.01em</div></div><div class="type-sample"><div class="type-label">Body Copy — Inter Regular</div><div class="type-body-sample">Before you commit to a major roofing decision,
+understand what is actually happening. Compass Roofing helps identify leaks,
+surface wear,
+drainage issues,
+storm-readiness concerns,
+and whether repair,
+coating,
+or replacement makes the most sense for your property.</div><div style="margin-top:8px; font-size:12px; color:var(--text-light);">Inter 400 · 15–16px · Line-height 1.7</div></div><div class="section-head">Type Scale</div><div class="card-grid col2"><div class="card"><h4>Display Scale</h4><div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;"><div style="font-size:13px; color:var(--text-muted); display:flex; justify-content:space-between;"><span>H1 Hero</span><span style="font-weight:700; color:var(--compass-blue);">48–64px / 800</span></div><div style="font-size:13px; color:var(--text-muted); display:flex; justify-content:space-between;"><span>H2 Section</span><span style="font-weight:700; color:var(--compass-blue);">28–36px / 700</span></div><div style="font-size:13px; color:var(--text-muted); display:flex; justify-content:space-between;"><span>H3 Subsection</span><span style="font-weight:700; color:var(--compass-blue);">20–24px / 700</span></div><div style="font-size:13px; color:var(--text-muted); display:flex; justify-content:space-between;"><span>H4 Card Label</span><span style="font-weight:700; color:var(--compass-blue);">15–17px / 700</span></div></div></div><div class="card"><h4>Text Scale</h4><div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;"><div style="font-size:13px; color:var(--text-muted); display:flex; justify-content:space-between;"><span>Body Large</span><span style="font-weight:700; color:var(--compass-blue);">16–17px / 400</span></div><div style="font-size:13px; color:var(--text-muted); display:flex; justify-content:space-between;"><span>Body Regular</span><span style="font-weight:700; color:var(--compass-blue);">14–15px / 400</span></div><div style="font-size:13px; color:var(--text-muted); display:flex; justify-content:space-between;"><span>Caption</span><span style="font-weight:700; color:var(--compass-blue);">12–13px / 400</span></div><div style="font-size:13px; color:var(--text-muted); display:flex; justify-content:space-between;"><span>Label / Eyebrow</span><span style="font-weight:700; color:var(--compass-blue);">10–11px / 700 / Uppercase</span></div></div></div></div></div>< !-- ── 06 HOMEPAGE WIREFRAME ── --><div class="chapter"><div class="chapter-num">06</div><h2>Homepage Layout</h2><div class="chapter-sub">Section-by-section design direction for the primary conversion page.</div><div class="wireframe">< !-- NAV --><div class="wf-bar"><span style="color:#4A7CC7; font-weight:700;">COMPASS ROOFING</span><span style="flex:1;"></span><span>Services</span><span>Service Areas</span><span>Projects</span><span>Reviews</span><span style="background:#D4870A; color:#fff; padding:4px 10px; border-radius:3px; font-weight:700;">Schedule Inspection</span></div>< !-- HERO --><div class="wf-hero"><div style="font-size:9px; color:#D4870A; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:6px; font-weight:700;">South Florida's Clear-Direction Roofer</div>
+ <div class="wf-hero-h1">Know Where Your Roof Stands</div><div class="wf-hero-sub">Clear inspections,
+honest recommendations,
+and dependable roofing solutions for South Florida homes and commercial properties.</div><div class="wf-cta-row"><div class="wf-cta-primary">Schedule Roof Inspection</div><div class="wf-cta-ghost">Explore Roofing Services</div></div>< !-- Floating glass service cards --><div style="display:flex; gap:6px; margin-top:16px; flex-wrap:wrap;"><div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:5px 10px; border-radius:4px; font-size:9px; color:rgba(255,255,255,0.7);">Roof Repair</div><div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:5px 10px; border-radius:4px; font-size:9px; color:rgba(255,255,255,0.7);">Replacement</div><div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:5px 10px; border-radius:4px; font-size:9px; color:rgba(255,255,255,0.7);">Coatings</div><div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:5px 10px; border-radius:4px; font-size:9px; color:rgba(255,255,255,0.7);">Flat Roofs</div><div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:5px 10px; border-radius:4px; font-size:9px; color:rgba(255,255,255,0.7);">Commercial</div><div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:5px 10px; border-radius:4px; font-size:9px; color:rgba(255,255,255,0.7);">Emergency</div></div></div>< !-- PROOF BAR --><div class="wf-proof"><div class="wf-proof-item"><div class="wf-proof-val">Local</div><div class="wf-proof-lbl">Roofing Team</div></div><div class="wf-proof-item"><div class="wf-proof-val">Res+Com</div><div class="wf-proof-lbl">Both Markets</div></div><div class="wf-proof-item"><div class="wf-proof-val">Repair → Replace</div><div class="wf-proof-lbl">Full Spectrum</div></div><div class="wf-proof-item"><div class="wf-proof-val">South Florida</div><div class="wf-proof-lbl">Service Area</div></div><div class="wf-proof-item"><div class="wf-proof-val">Clear</div><div class="wf-proof-lbl">Inspection Process</div></div></div>< !-- DIAGNOSTIC SECTION --><div class="wf-dark-section"><div style="font-size:11px; font-weight:700; color:rgba(255,255,255,0.6); margin-bottom:8px; letter-spacing:0.1em; text-transform:uppercase;">Roof Health Diagnostic — Signature Section</div><div style="font-weight:800; font-size:14px; color:white; margin-bottom:6px;">Get A Clear Read On Your Roof</div><div style="display:flex; gap:6px; flex-wrap:wrap;"><div style="background:rgba(255,255,255,0.06); border:1px solid rgba(74,124,199,0.25); padding:8px 12px; border-radius:5px; flex:1; min-width:80px; font-size:9px; color:rgba(255,255,255,0.6);">Leak Risk</div><div style="background:rgba(255,255,255,0.06); border:1px solid rgba(74,124,199,0.25); padding:8px 12px; border-radius:5px; flex:1; min-width:80px; font-size:9px; color:rgba(255,255,255,0.6);">Roof Age</div><div style="background:rgba(255,255,255,0.06); border:1px solid rgba(74,124,199,0.25); padding:8px 12px; border-radius:5px; flex:1; min-width:80px; font-size:9px; color:rgba(255,255,255,0.6);">Surface Wear</div><div style="background:rgba(255,255,255,0.06); border:1px solid rgba(74,124,199,0.25); padding:8px 12px; border-radius:5px; flex:1; min-width:80px; font-size:9px; color:rgba(255,255,255,0.6);">Drainage</div><div style="background:rgba(255,255,255,0.06); border:1px solid rgba(74,124,199,0.25); padding:8px 12px; border-radius:5px; flex:1; min-width:80px; font-size:9px; color:rgba(255,255,255,0.6);">Storm Ready</div><div style="background:rgba(255,255,255,0.06); border:1px solid rgba(212,135,10,0.3); padding:8px 12px; border-radius:5px; flex:1; min-width:80px; font-size:9px; color:#D4870A;">Recommendation</div></div></div>< !-- SERVICES SECTION --><div class="wf-section"><div class="wf-section-label">Services — Roofing Services With A Clear Path Forward</div><div class="wf-cards"><div class="wf-card"></div><div class="wf-card"></div><div class="wf-card"></div><div class="wf-card"></div><div class="wf-card"></div></div></div>< !-- EDUCATION SECTION --><div class="wf-section"><div class="wf-section-label">Education — Not Every Roof Problem Needs A New Roof</div><div class="wf-cards"><div class="wf-card" style="height:40px;"></div><div class="wf-card" style="height:40px;"></div><div class="wf-card" style="height:40px;"></div><div class="wf-card" style="height:40px;"></div><div class="wf-card" style="height:40px;"></div></div></div>< !-- RESIDENTIAL / COMMERCIAL SPLIT --><div class="wf-section" style="background:var(--soft-gray);"><div class="wf-section-label">Split Section — For Homeowners / For Property Owners</div><div class="wf-cards"><div class="wf-card" style="height:80px; background: rgba(27,58,107,0.08);"></div><div class="wf-card" style="height:80px; background: rgba(27,58,107,0.15);"></div></div></div>< !-- BUILT FOR SF CONDITIONS --><div class="wf-dark-section"><div style="font-size:11px; font-weight:700; color:rgba(255,255,255,0.5); margin-bottom:6px;">Built For South Florida Conditions</div><div style="display:flex; gap:6px;"><div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); padding:8px; border-radius:4px; flex:1; font-size:9px; color:rgba(255,255,255,0.4);">Heavy Rain</div><div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); padding:8px; border-radius:4px; flex:1; font-size:9px; color:rgba(255,255,255,0.4);">Hurricane Season</div><div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); padding:8px; border-radius:4px; flex:1; font-size:9px; color:rgba(255,255,255,0.4);">UV Exposure</div><div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); padding:8px; border-radius:4px; flex:1; font-size:9px; color:rgba(255,255,255,0.4);">Flat Roof Drainage</div></div></div>< !-- PROJECTS --><div class="wf-section"><div class="wf-section-label">Projects — Recent Roof Work Across South Florida</div><div class="wf-cards"><div class="wf-card" style="height:72px;"></div><div class="wf-card" style="height:72px;"></div><div class="wf-card" style="height:72px;"></div></div></div>< !-- REVIEWS --><div class="wf-section" style="background:rgba(27,58,107,0.03);"><div class="wf-section-label">Reviews — Peace Of Mind Starts At The Roofline</div><div class="wf-cards"><div class="wf-card" style="height:80px;"></div><div class="wf-card" style="height:80px;"></div><div class="wf-card" style="height:80px;"></div></div></div>< !-- FINAL CTA --><div class="wf-dark-section" style="text-align:center; padding:24px;"><div style="font-size:14px; font-weight:800; color:white; margin-bottom:6px;">Not Sure If You Need A Repair Or Replacement?</div><div style="font-size:10px; color:rgba(255,255,255,0.5); margin-bottom:12px;">Start with a clear inspection. Get honest answers.</div><div style="display:flex; gap:8px; justify-content:center;"><div class="wf-cta-primary">Schedule Roof Inspection</div><div class="wf-cta-ghost">Call Compass Roofing</div></div></div>< !-- FOOTER --><div class="wf-bar" style="height:60px; justify-content:space-around;"><span>Services</span><span>Service Areas</span><span>Projects</span><span>Reviews</span><span>Contact</span><span style="color:#D4870A; font-size:10px;">(954) XXX-XXXX</span></div></div></div>< !-- ── 07 SITEMAP ── --><div class="chapter"><div class="chapter-num">07</div><h2>Full Sitemap</h2><div class="chapter-sub">80+pages across 7 content pillars — all SEO-ready,
+all internally linked.</div><div class="sitemap"><div class="sitemap-root">compassroofing.com/</div><div style="margin-left: 28px; border-left: 2px solid var(--border-medium); padding-left: 20px; margin-top: 8px;"><div class="sitemap-branch-head">Core Pages</div><div class="sitemap-page">/about/</div><div class="sitemap-page">/services/</div><div class="sitemap-page">/service-areas/</div><div class="sitemap-page">/projects/</div><div class="sitemap-page">/reviews/</div><div class="sitemap-page">/resources/</div><div class="sitemap-page">/contact/</div><div class="sitemap-branch-head" style="margin-top:20px;">Service Pages <span class="tag tag-blue">10 pages</span></div><div class="sitemap-page">/services/roof-repair/</div><div class="sitemap-page">/services/roof-replacement/</div><div class="sitemap-page">/services/residential-roofing/</div><div class="sitemap-page">/services/commercial-roofing/</div><div class="sitemap-page">/services/flat-roofing/</div><div class="sitemap-page">/services/roof-coatings/</div><div class="sitemap-page">/services/roof-installation/</div><div class="sitemap-page">/services/roof-renovation/</div><div class="sitemap-page">/services/roof-inspections/</div><div class="sitemap-page">/services/emergency-roof-repair/</div><div class="sitemap-branch-head" style="margin-top:20px;">Roof Types <span class="tag tag-gray">4 pages</span></div><div class="sitemap-page">/roof-types/tile-roofing/</div><div class="sitemap-page">/roof-types/shingle-roofing/</div><div class="sitemap-page">/roof-types/metal-roofing/</div><div class="sitemap-page">/roof-types/flat-roofing/</div><div class="sitemap-branch-head" style="margin-top:20px;">Location Pages <span class="tag tag-blue">20 pages</span></div><div class="sitemap-page">/service-areas/fort-lauderdale-roofing/</div><div class="sitemap-page">/service-areas/hollywood-roofing/</div><div class="sitemap-page">/service-areas/coral-springs-roofing/</div><div class="sitemap-page">/service-areas/pompano-beach-roofing/</div><div class="sitemap-page">/service-areas/plantation-roofing/</div><div class="sitemap-page">/service-areas/davie-roofing/</div><div class="sitemap-page">/service-areas/weston-roofing/</div><div class="sitemap-page">/service-areas/pembroke-pines-roofing/</div><div class="sitemap-page">/service-areas/miramar-roofing/</div><div class="sitemap-page">/service-areas/deerfield-beach-roofing/</div><div class="sitemap-page">/service-areas/boca-raton-roofing/</div><div class="sitemap-page">/service-areas/sunrise-roofing/ <span style="color:#D4870A;">(+ 8 more)</span></div><div class="sitemap-branch-head" style="margin-top:20px;">Resource Pages <span class="tag tag-amber">10 pages</span></div><div class="sitemap-page">/resources/roof-repair-vs-replacement/</div><div class="sitemap-page">/resources/signs-you-need-a-new-roof/</div><div class="sitemap-page">/resources/how-to-prepare-your-roof-for-hurricane-season/</div><div class="sitemap-page">/resources/flat-roof-problems-south-florida/</div><div class="sitemap-page">/resources/roof-coatings-for-south-florida-buildings/</div><div class="sitemap-page">/resources/how-long-does-a-roof-last-in-florida/</div><div class="sitemap-page">/resources/what-to-ask-before-hiring-a-roofing-contractor/ <span style="color:#D4870A;">(+ 4 more)</span></div><div class="sitemap-branch-head" style="margin-top:20px;">Project Pages <span class="tag tag-gray">Growing</span></div><div class="sitemap-page">/projects/tile-roof-repair-fort-lauderdale/</div><div class="sitemap-page">/projects/flat-roof-coating-hollywood/</div><div class="sitemap-page">/projects/shingle-roof-replacement-coral-springs/</div><div class="sitemap-page">/projects/commercial-flat-roof-pompano-beach/ <span style="color:#D4870A;">(+ expanding)</span></div></div></div></div>< !-- ── 08 PAGE TEMPLATES ── --><div class="chapter"><div class="chapter-num">08</div><h2>Page Templates</h2><div class="chapter-sub">Seven reusable templates. Every section specified. No guessing for the build team.</div><div class="card-grid col2"><div class="card"><div class="tag tag-blue" style="margin-bottom:10px;">Template 1</div><h4>Homepage</h4><p>Hero → Proof Bar → Roof Diagnostic → Services → Education → Residential/Commercial Split → South Florida Conditions → Projects → Reviews → Service Areas → FAQ → Final CTA → Footer</p></div><div class="card"><div class="tag tag-blue" style="margin-bottom:10px;">Template 2</div><h4>Service Page</h4><p>Service Hero → Overview → Problem/Symptom → When You Need This → Process → Related Roof Types → Project Examples → Reviews → Service Areas → FAQ → CTA</p></div><div class="card"><div class="tag tag-blue" style="margin-bottom:10px;">Template 3</div><h4>Location Page</h4><p>City Hero → Local Intro → Services Available → Local Weather Section → Project Proof → Nearby Areas → Reviews → FAQ → CTA. <strong>Each page must feel specific to that city,
+not duplicated.</strong></p></div><div class="card"><div class="tag tag-blue" style="margin-bottom:10px;">Template 4</div><h4>Roof Type Page</h4><p>Roof Type Hero → Overview → Common Problems → Repair/Coating/Replacement Options → South Florida Considerations → Related Services → Project Examples → FAQ → CTA</p></div><div class="card"><div class="tag tag-blue" style="margin-bottom:10px;">Template 5</div><h4>Project Page</h4><p>Project Hero → Summary (Location / Property Type / Roof Type / Problem / Solution / Result) → Before/After Gallery → Related Services → Related City → CTA</p></div><div class="card"><div class="tag tag-blue" style="margin-bottom:10px;">Template 6</div><h4>Resource / Blog Page</h4><p>Article Hero → Intro → Table of Contents → Main Content → Callout Boxes → Related Services → Related Articles → FAQ → CTA. Link minimum 2 service pages per article.</p></div></div></div>< !-- ── 09 COMPONENT LIBRARY ── --><div class="chapter"><div class="chapter-num">09</div><h2>Component Library</h2><div class="chapter-sub">Reusable UI building blocks for consistent execution across all 80+pages.</div><div class="section-head">CTA Buttons</div><div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px; align-items:center;"><div class="btn-primary">Schedule Roof Inspection</div><div class="btn-secondary">Call Compass Roofing</div><div class="btn-primary" style="background:transparent; color:var(--signal-amber); border:2px solid var(--signal-amber);">Request Estimate</div></div><div class="section-head">Trust / Proof Cards</div><div class="card-grid col3"><div class="card" style="border-top:3px solid var(--compass-blue);"><div style="font-size:10px; color:var(--signal-amber); font-weight:700; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:6px;">★★★★★</div><h4>Maria T. — Fort Lauderdale</h4><p>"Compass Roofing came out, gave us a clear report, and explained why we needed a coating rather than a full replacement. Saved us thousands." </p><div style="font-size:11px; color:var(--text-light); margin-top:8px;">Roof Coating · Residential</div></div><div class="card" style="border-top:3px solid var(--compass-blue);"><div style="font-size:10px; color:var(--signal-amber); font-weight:700; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:6px;">★★★★★</div><h4>Robert H. — Coral Springs</h4><p>"Honest inspection, fair pricing, clean work. They flagged two problem areas I didn't even know about. Highly recommend for Broward homeowners." </p><div style="font-size:11px; color:var(--text-light); margin-top:8px;">Roof Repair · Residential</div></div><div class="card" style="border-top:3px solid var(--sky-blue);"><div style="font-size:10px; color:var(--signal-amber); font-weight:700; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:6px;">★★★★★</div><h4>Allied Property — Hollywood</h4><p>"We needed a commercial flat roof evaluated quickly before hurricane season. Compass got out within 48 hours and gave us a prioritized action plan." </p><div style="font-size:11px; color:var(--text-light); margin-top:8px;">Commercial Roofing · Flat Roof</div></div></div><div class="section-head">Diagnostic Dashboard Cards (Dark)</div><div style="background:var(--storm-charcoal); padding:24px; border-radius:10px; margin-bottom:24px;"><div style="font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--signal-amber); margin-bottom:16px;">Roof Health Diagnostic</div><div class="card-grid col3"><div style="background:rgba(255,255,255,0.06); border:1px solid rgba(74,124,199,0.2); border-radius:8px; padding:16px;"><div style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--sky-blue); margin-bottom:6px;">Leak Risk</div><div style="font-size:22px; font-weight:800; color:#fff; margin-bottom:4px;">Moderate</div><div style="font-size:12px; color:rgba(255,255,255,0.4);">Flashing gaps noted near chimney</div></div><div style="background:rgba(255,255,255,0.06); border:1px solid rgba(74,124,199,0.2); border-radius:8px; padding:16px;"><div style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--sky-blue); margin-bottom:6px;">Surface Wear</div><div style="font-size:22px; font-weight:800; color:#fff; margin-bottom:4px;">40–60%</div><div style="font-size:12px; color:rgba(255,255,255,0.4);">Granule loss on south-facing slopes</div></div><div style="background:rgba(212,135,10,0.1); border:1px solid rgba(212,135,10,0.3); border-radius:8px; padding:16px;"><div style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--signal-amber); margin-bottom:6px;">Recommendation</div><div style="font-size:22px; font-weight:800; color:#fff; margin-bottom:4px;">Coating</div><div style="font-size:12px; color:rgba(255,255,255,0.4);">Replacement not yet warranted</div></div></div></div><div class="section-head">Service Cards</div><div class="card-grid col3"><div class="card"><div style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--signal-amber); font-weight:700; margin-bottom:8px;">Emergency</div><h4>Emergency Roof Repair</h4><p>Active leak? Storm damage? Compass Roofing provides emergency roof repair for South Florida homes and commercial properties — fast response,
+clear assessment.</p><div style="margin-top:12px;"><a href="#" style="font-size:12px; font-weight:700; color:var(--compass-blue); text-decoration:none;">Get Emergency Help →</a></div></div><div class="card"><div style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--sky-blue); font-weight:700; margin-bottom:8px;">Residential</div><h4>Roof Replacement</h4><p>When repair or coating no longer makes sense,
+a full replacement gives your home a new roof built for South Florida's heat, rain, and wind conditions.</p>
+ <div style="margin-top:12px;"><a href="#" style="font-size:12px; font-weight:700; color:var(--compass-blue); text-decoration:none;">Plan Your Replacement →</a></div></div><div class="card"><div style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--sky-blue); font-weight:700; margin-bottom:8px;">Commercial</div><h4>Flat Roof Solutions</h4><p>TPO,
+modified bitumen,
+and membrane systems for commercial flat roofs. Inspections,
+coatings,
+repairs,
+and full replacements for Broward County properties.</p><div style="margin-top:12px;"><a href="#" style="font-size:12px; font-weight:700; color:var(--compass-blue); text-decoration:none;">Explore Commercial Roofing →</a></div></div></div></div>< !-- ── 10 SEO ARCHITECTURE ── -->< !-- ── 10 SEO ARCHITECTURE ── --><div class="chapter"><div class="chapter-num">10</div><h2>SEO Architecture</h2><div class="chapter-sub">Keyword strategy,
+internal linking,
+schema,
+and technical requirements for dominant local search presence.</div><div class="section-head">Primary Keyword Targets</div><div class="seo-pillar"><div class="seo-pillar-head"><span>Homepage</span></div><div class="seo-pillar-body"><div class="kw-tag">south florida roofing company</div><div class="kw-tag">broward county roofing</div><div class="kw-tag">roof repair south florida</div><div class="kw-tag">roof replacement south florida</div><div class="kw-tag">residential roofing broward</div><div class="kw-tag">commercial roofing broward</div></div></div><div class="seo-pillar"><div class="seo-pillar-head"><span>Service Pages</span></div><div class="seo-pillar-body"><div class="kw-tag">roof repair broward county</div><div class="kw-tag">roof replacement broward</div><div class="kw-tag">flat roofing south florida</div><div class="kw-tag">roof coatings south florida</div><div class="kw-tag">roof inspection broward</div><div class="kw-tag">emergency roof repair broward</div></div></div><div class="seo-pillar"><div class="seo-pillar-head"><span>Location Pages — Pattern</span></div><div class="seo-pillar-body"><div class="kw-tag">roofing company in [city]</div><div class="kw-tag">roof repair [city]</div><div class="kw-tag">roof replacement [city]</div><div class="kw-tag">commercial roofing [city]</div><div class="kw-tag">roof inspection [city]</div><div class="kw-tag">roofing contractor [city]</div></div></div><div class="section-head">Internal Linking Rules</div><div class="process-steps"><div class="process-step"><div class="step-num">1</div><div class="step-body"><h4>Homepage → Everything</h4><p>Homepage links to every core service page,
+major city pages,
+project examples,
+and resource previews. It is the hub of the entire link graph.</p></div></div><div class="process-step"><div class="step-num">2</div><div class="step-body"><h4>Service Pages ↔ Location Pages</h4><p>Each service page includes a "Serving These Areas" block linking to city pages. Each city page links back to all available services.</p></div></div><div class="process-step"><div class="step-num">3</div><div class="step-body"><h4>Roof Type Pages ↔ Service Pages</h4><p>Tile roofing links to roof repair,
+replacement,
+and inspection. Flat roofing links to coatings and commercial roofing. Cross-linking reinforces topical authority.</p></div></div><div class="process-step"><div class="step-num">4</div><div class="step-body"><h4>Resource Pages → 2+Services+1 CTA</h4><p>Every blog article must link to at least two relevant service pages and include one inspection request CTA. Articles drive both rankings and leads.</p></div></div><div class="process-step"><div class="step-num">5</div><div class="step-body"><h4>Footer Navigation</h4><p>Footer includes all core services,
+8–10 major cities,
+contact,
+reviews,
+and resource links. Ensures Google can crawl the full hierarchy from every page.</p></div></div></div><div class="section-head">Schema Markup</div><div class="card-grid col2"><div class="card"><h4>Required Schema</h4><ul class="check-list"><li>LocalBusiness / RoofingContractor on homepage</li><li>Organization schema sitewide</li><li>Service schema on all service pages</li><li>FAQPage schema on all FAQ sections</li><li>BreadcrumbList on all interior pages</li><li>WebSite schema on homepage</li></ul></div><div class="card"><h4>Technical SEO Requirements</h4><ul class="check-list"><li>One H1 per page — semantically accurate</li><li>WebP images with descriptive alt text and filenames</li><li>Clean canonical URLs — no trailing parameters</li><li>Mobile-first,
+Core Web Vitals compliant (LCP &lt; 2.5s)</li><li>XML sitemap covering all 80+pages,
+submitted to GSC</li><li>NAP consistent in footer across all pages</li></ul></div></div></div>< !-- ── 11 CONVERSION SYSTEM ── --><div class="chapter"><div class="chapter-num">11</div><h2>Conversion &amp;
+CTA System</h2><div class="chapter-sub">Every lead type has a clear path. No dead ends on any page.</div><div class="section-head">Primary CTA Hierarchy</div><div class="metric-row"><div class="metric-card"><div class="metric-val">1°</div><div class="metric-lbl">Schedule Roof Inspection</div></div><div class="metric-card"><div class="metric-val">2°</div><div class="metric-lbl">Call Compass Roofing</div></div><div class="metric-card"><div class="metric-val">3°</div><div class="metric-lbl">Request Roofing Estimate</div></div><div class="metric-card"><div class="metric-val">4°</div><div class="metric-lbl">Emergency Repair CTA</div></div></div><div class="section-head">Form Specs</div><div class="card-grid col2"><div class="card"><h4>Short Form — Most Pages</h4><ul class="check-list"><li>Name</li><li>Phone (required)</li><li>Email</li><li>Property Address</li><li>Service Needed (dropdown)</li><li>Residential or Commercial</li><li>Message (optional)</li></ul></div><div class="card"><h4>Full Estimate Form — Contact Page</h4><ul class="check-list"><li>All short form fields,
+plus:</li><li>Roof Type (dropdown)</li><li>Repair or Replacement?</li><li>Timeline (dropdown)</li><li>Photo Upload (optional)</li><li>How Did You Hear About Us?</li></ul></div></div><div class="callout amber"><div class="callout-label">Form Reassurance Copy</div><p>"Not sure what you need? Start with an inspection and we'll help you understand your options — no commitment required." </p></div><div class="section-head">Sticky Mobile CTA Bar</div><div style="background:var(--storm-charcoal); border-radius:10px; padding:20px 24px; display:flex; gap:12px; align-items:center; margin:16px 0;"><div class="btn-primary" style="flex:1; text-align:center; padding:14px;">📞 Call Now</div><div class="btn-primary" style="flex:1; text-align:center; padding:14px; background:var(--compass-blue);">Schedule Inspection</div></div><p style="font-size:12px; color:var(--text-muted);">Pinned to the bottom of the mobile viewport. Always visible. Hides only during active form field input to avoid obscuring the keyboard.</p></div>< !-- ── 12 IMAGE DIRECTION ── --><div class="chapter"><div class="chapter-num">12</div><h2>Image Direction</h2><div class="chapter-sub">Cinematic but real. South Florida light. Premium but practical. Never stock-photo obvious.</div><div class="card-grid col3"><div class="card-dark"><h4>Hero Images</h4><p>Aerial or angled view of a South Florida roofline. Strong architectural lines. Dark overlay for text. No disaster imagery.</p></div><div class="card-dark"><h4>Inspection Images</h4><p>Contractor examining tile,
+shingle,
+flashing,
+flat roof membrane. Close-up material detail. Used in the Diagnostic section.</p></div><div class="card-dark"><h4>Project Gallery</h4><p>Before/after roofing work. Finished systems. Drone shots. City and roof type overlaid in HTML text,
+never baked into the image file.</p></div><div class="card-dark"><h4>Roof Type Detail</h4><p>Tile,
+shingle,
+metal standing-seam,
+TPO membrane. High-resolution close-up. Used in roof type pages and service cards.</p></div><div class="card-dark"><h4>South Florida Context</h4><p>Residential neighborhoods,
+commercial buildings,
+storm clouds,
+Florida sky. Establishes local identity without clichés or scare tactics.</p></div><div class="card-dark"><h4>Trust / Team</h4><p>Contractor speaking with homeowner. Branded truck. Crew photo. Customer in front of completed roof project. Human,
+professional,
+local.</p></div></div><div class="section-head">File Naming &amp;
+Alt Text</div><div class="card-grid col2"><div class="card"><h4>File Naming Convention</h4><ul class="check-list"><li>fort-lauderdale-roof-replacement.webp</li><li>broward-flat-roof-coating.webp</li><li>south-florida-tile-roof-repair.webp</li><li>compass-roofing-inspection.webp</li><li>commercial-flat-roof-pompano-beach.webp</li></ul></div><div class="card"><h4>Alt Text Examples</h4><ul class="check-list"><li>Compass Roofing inspecting a tile roof in Fort Lauderdale</li><li>Completed flat roof coating on commercial building in Broward County</li><li>South Florida residential roof replacement with storm-ready system</li><li>Roofer checking flashing detail during roof inspection</li></ul></div></div></div>< !-- ── 13 COPY BLOCKS ── --><div class="chapter"><div class="chapter-num">13</div><h2>Copy Blocks</h2><div class="chapter-sub">Production-ready copy for every key section. Drop directly into Antigravity or any CMS.</div><div class="copy-block"><div class="eyebrow">Homepage Hero — H1</div><h3>Know Where Your Roof Stands</h3><p>Compass Roofing helps South Florida homeowners and property owners understand,
+repair,
+protect,
+and replace their roofs with clear inspections and dependable roofing solutions.</p><div class="btn-primary">Schedule Roof Inspection</div></div><div class="copy-block"><div class="eyebrow">Roof Diagnostic Section</div><h3>Get A Clear Read On Your Roof</h3><p>Before you commit to a major roofing decision,
+understand what is actually happening. Compass Roofing helps identify leaks,
+surface wear,
+drainage issues,
+storm-readiness concerns,
+and whether repair,
+coating,
+or replacement makes the most sense for your property.</p></div><div class="copy-block"><div class="eyebrow">Education Section</div><h3>Not Every Roof Problem Needs A New Roof</h3><p>Some roofing issues can be handled with a targeted repair. Others may call for a coating,
+a restoration,
+or a full replacement. The right answer starts with a clear inspection and an honest recommendation — not a sales pitch.</p></div><div class="copy-block"><div class="eyebrow">South Florida Conditions Section</div><h3>Built For South Florida Conditions</h3><p>Heat,
+rain,
+wind,
+and age all put pressure on your roof. Compass Roofing helps property owners choose roofing solutions built for the conditions South Florida actually faces — not generic solutions designed for somewhere else.</p></div><div class="copy-block"><div class="eyebrow">Final CTA Section</div><h3>Not Sure If You Need A Repair Or Replacement?</h3><p>Start with a clear roof inspection. Get honest answers,
+understand your options,
+and know where your roof stands before committing to a major roofing project.</p><div class="btn-primary">Schedule Roof Inspection</div></div><div class="section-head">Service Page Copy Pattern</div><div class="card-grid col2"><div class="card"><h4>Roof Replacement — Service Hero Copy</h4><p style="font-size:13px; font-style:italic; color:var(--text-muted);">H1: "Roof Replacement In South Florida" </p><p style="font-size:13px;">When a roof repair or coating is no longer the right answer,
+a full replacement gives your home or property a new roof system built for South Florida's heat, rain, and hurricane season. Compass Roofing provides honest assessments so you know exactly when replacement makes sense — and when it doesn' t.</p></div><div class="card"><h4>Fort Lauderdale — Location Page Copy</h4><p style="font-size:13px; font-style:italic; color:var(--text-muted);">H1: "Roofing Company In Fort Lauderdale" </p><p style="font-size:13px;">Compass Roofing provides roof repair,
+replacement,
+inspection,
+and coating services for Fort Lauderdale homes and commercial properties. From the barrier island to the western suburbs,
+our team understands the roofing conditions Fort Lauderdale properties face year-round.</p></div></div></div>< !-- ── 14 MOBILE REQUIREMENTS ── --><div class="chapter"><div class="chapter-num">14</div><h2>Mobile Design Requirements</h2><div class="chapter-sub">Most roofing searches happen on mobile. The mobile experience is primary,
+not a scaled-down afterthought.</div><div class="card-grid col2"><div class="card"><h4>Mobile Header</h4><ul class="check-list"><li>Logo left-aligned,
+small enough not to dominate</li><li>Phone number as tappable icon — top right</li><li>Hamburger menu — far right</li><li>No nav items visible on load — drawer only</li></ul></div><div class="card"><h4>Mobile Hero</h4><ul class="check-list"><li>H1 fully above the fold — no scroll needed</li><li>Primary CTA button full-width below subhead</li><li>Subheadline at 16px minimum — readable at arm's length</li>
+ <li>Floating service pills collapse to 2-row wrap</li></ul></div><div class="card"><h4>Mobile Forms</h4><ul class="check-list"><li>All fields minimum 48px tall for thumb accuracy</li><li>Labels above fields — never placeholder-only</li><li>Phone field triggers numeric keyboard</li><li>Photo upload clearly marked as optional</li></ul></div><div class="card"><h4>Mobile Performance</h4><ul class="check-list"><li>Target LCP under 2.5s on 4G</li><li>No layout shift from fonts or images loading</li><li>Lazy-load all project and gallery images</li><li>Defer all non-critical third-party scripts</li></ul></div></div><div class="callout"><div class="callout-label">Glass Effect Warning — Mobile</div><p><strong>Scale back frosted glass effects on screens under 480px.</strong>CSS backdrop-filter is a known performance bottleneck on mid-tier Android devices — which are common throughout the South Florida market. Use solid backgrounds with matching opacity on mobile. The brand still reads correctly;
+the glass is the enhancement,
+not the foundation.</p></div></div>< !-- ── 15 TRACKING ── --><div class="chapter"><div class="chapter-num">15</div><h2>Tracking &amp;
+Analytics Setup</h2><div class="chapter-sub">Every lead type tracked. Every source attributable. Osiris One pipeline-ready from day one.</div><div class="card-grid col2"><div class="card"><h4>GA4 Conversion Events</h4><ul class="check-list"><li>phone_click — header,
+hero,
+mobile sticky,
+footer</li><li>inspection_form_submit</li><li>estimate_form_submit</li><li>emergency_cta_click</li><li>service_page_cta_click (dimension: service name)</li><li>location_page_cta_click (dimension: city)</li><li>photo_upload_initiated</li><li>mobile_sticky_call vs mobile_sticky_schedule</li></ul></div><div class="card"><h4>Required Integrations</h4><ul class="check-list"><li>Google Analytics 4 — enhanced measurement on</li><li>Google Search Console — property verified</li><li>Google Ads — call+form conversion import</li><li>Meta Pixel — standard events+custom lead event</li><li>Call tracking number (CallRail or similar)</li><li>CRM form routing by service type</li><li>GBP UTM parameters on all profile links</li><li>Osiris One — UTM passthrough on all form submissions</li></ul></div></div><div class="callout amber"><div class="callout-label">Osiris One Attribution Note</div><p>Design all lead forms with UTM passthrough from day one. Each submission should capture: <strong>source,
+medium,
+campaign,
+keyword,
+landing page URL,
+service requested,
+residential vs commercial.</strong>Emergency leads should carry an EMERGENCY flag in the CRM routing to trigger a priority response workflow. This structure feeds directly into the Osiris One multi-touch attribution dashboard.</p></div></div>< !-- ── 16 ANTIGRAVITY PROMPT ── --><div class="chapter"><div class="chapter-num">16</div><h2>Antigravity Build Prompt</h2><div class="chapter-sub">Clean,
+complete,
+paste-ready. Everything the build team needs — nothing they don't.</div>
+
+<div class="prompt-block"><span class="ph">═══════════════════════════════════════════════════════ COMPASS ROOFING — ANTIGRAVITY BUILD BRIEF Prepared by Zeus Media ═══════════════════════════════════════════════════════</span><span class="pk">CLIENT:</span><span class="pv">Compass Roofing</span><span class="pk">MARKET:</span><span class="pv">South Florida / Broward County</span><span class="pk">BUSINESS TYPE:</span><span class="pv">Local Roofing Contractor — Residential+Commercial</span><span class="pk">STRATEGY:</span><span class="pv">Brand elevation,
+NOT a rebrand. Preserve existing equity. Upgrade execution.</span><span class="pk">CORE IDEA:</span><span class="pv">"Know Where Your Roof Stands." </span><span class="pk">SUPPORT LINE:</span><span class="pv">"Clear Direction. Stronger Roofs." </span><span class="ph">─────────────────────────────────────────────────────── DESIGN DIRECTION ───────────────────────────────────────────────────────</span><span class="pk">PRIMARY REFERENCES:</span><span class="pv">genesis.live</span><span class="pc">→ Spacious storytelling,
+premium data-card layouts,
+calm intelligent hierarchy,
+clean system design</span><span class="pv">tryklack.com</span><span class="pc">→ Dark premium atmosphere,
+frosted glass UI,
+metallic/refraction details,
+product-site polish</span><span class="pk">OVERALL FEEL:</span><span class="pv">Premium South Florida roofing company with a sharper identity. NOT a tech startup. NOT a crypto landing page. NOT a generic contractor template. Think: storm glass,
+brushed metal,
+roof systems,
+clear inspections,
+local trust. Glass effects must feel roofing-specific — inspection clarity,
+storm protection,
+material precision. Not decorative. Every glass or metallic detail should reinforce the roofing brand idea.</span><span class="pk">AVOID:</span><span class="pv">✗ Neon gradients or excessive color ✗ Cheap orange contractor-template energy ✗ Generic clip art,
+cartoon tools,
+hammers,
+ladders ✗ Overly futuristic SaaS/startup visuals ✗ Fear-based hurricane copy ✗ "Quality you can trust" or "affordable and reliable" filler ✗ Glass effects as pure decoration ✗ Thin city pages with duplicated content</span><span class="ph">─────────────────────────────────────────────────────── COLOR TOKENS ───────────────────────────────────────────────────────</span><span class="pk">--compass-blue:</span><span class="pv">#1B3A6B</span><span class="pc">Primary brand color. Headers,
+nav,
+card labels,
+logo.</span><span class="pk">--storm-blue:</span><span class="pv">#2251A3</span><span class="pc">Section accents,
+card borders,
+CTA hover states.</span><span class="pk">--sky-blue:</span><span class="pv">#4A7CC7</span><span class="pc">Light accents,
+frosted glass tint,
+service card tags.</span><span class="pk">--warm-white:</span><span class="pv">#F8F7F4</span><span class="pc">Page background. Not pure white — subtle warm cast.</span><span class="pk">--soft-gray:</span><span class="pv">#E8E6E1</span><span class="pc">Card backgrounds,
+dividers,
+proof bar,
+light sections.</span><span class="pk">--storm-charcoal:</span><span class="pv">#1A1C22</span><span class="pc">Dark sections: hero,
+diagnostics,
+conditions,
+final CTA.</span><span class="pk">--deep-charcoal:</span><span class="pv">#111318</span><span class="pc">Darkest bg. Footer,
+full-bleed dark overlays.</span><span class="pk">--signal-amber:</span><span class="pv">#D4870A</span><span class="pc">PRIMARY CTA BUTTONS ONLY. Compass needle in logo. Eyebrow labels. USE SPARINGLY.</span><span class="pk">--brushed-silver:</span><span class="pv">#8A8E99</span><span class="pc">Metallic borders,
+card edges,
+icon fills,
+dividers.</span><span class="pk">--body-text:</span><span class="pv">#2C2E35</span><span class="pc">All body copy. Not pure black.</span><span class="pk">--text-muted:</span><span class="pv">#5A5E6B</span><span class="pc">Secondary text,
+captions,
+card descriptions.</span><span class="pk">AMBER USAGE RULE:</span><span class="pv">Signal amber is a navigational accent,
+not a brand color. Maximum: ONE amber element visible per viewport section at a time. Use for: primary CTA buttons,
+compass needle in logo,
+eyebrow labels,
+warning callouts. Never use for: backgrounds,
+borders,
+card fills,
+or decorative elements.</span><span class="ph">─────────────────────────────────────────────────────── TYPOGRAPHY ───────────────────────────────────────────────────────</span><span class="pk">Display / H1–H2:</span><span class="pv">Montserrat,
+weight 700–800,
+Title Case,
+letter-spacing -0.02em</span><span class="pk">Body / UI:</span><span class="pv">Inter,
+weight 400,
+15–16px,
+line-height 1.7</span><span class="pk">Eyebrow Labels:</span><span class="pv">10–11px,
+weight 700,
+UPPERCASE,
+letter-spacing 0.18em,
+color: signal-amber</span><span class="pk">TYPE SCALE:</span><span class="pv">H1: 48–64px desktop / 34–40px mobile — ONE per page</span><span class="pv">H2: 28–36px — major section headers</span><span class="pv">H3: 20–24px — card headers,
+subsections</span><span class="pv">H4: 15–17px — card labels</span><span class="pv">Body: 15–16px / Line-height 1.7</span><span class="pv">Caption: 12–13px</span><span class="ph">─────────────────────────────────────────────────────── HOMEPAGE — COMPLETE SECTION SPECS ───────────────────────────────────────────────────────</span><span class="pk">SECTION 01 — HEADER / NAV</span><span class="pv">Layout: Sticky. Transparent on load. Dark (storm-charcoal bg) on scroll. Left: Compass Roofing logo — horizontal lockup Center: Services | Service Areas | Projects | Reviews | Resources Right: (954) XXX-XXXX [clickable tel:]+"Schedule Inspection"[amber button] Mobile: Logo left+phone icon right+hamburger far right Mobile nav: Full-screen drawer with all links+amber CTA at bottom</span><span class="pk">SECTION 02 — HERO</span><span class="pv">Background: storm-charcoal base+deep blue radial gradient+South Florida roof photography Overlay: dark semi-opaque layer for text contrast+subtle compass grid (5% opacity) Eyebrow: "South Florida's Clear-Direction Roofing Company"[signal-amber] H1: "Know Where Your Roof Stands"[white,
+Montserrat 800] Subhead: "Clear inspections, honest recommendations, and dependable roofing solutions
+ for South Florida homes and commercial properties."  [white 60%]
+ CTA Row: [Schedule Roof Inspection — amber button] [Explore Roofing Services — ghost button] Glass Pills (floating below CTAs, frosted blue-tint cards): Roof Repair · Roof Replacement · Roof Coatings · Flat Roof Solutions · Residential · Commercial NOTE: Hero fade-in on load is acceptable. No looping animations in hero. No parallax.</span><span class="pk">SECTION 03 — PROOF / TRUST BAR</span><span class="pv">Background: warm-white or white,
+full-width 5 metric cards in a row: "Local Roofing Team" · "Residential + Commercial" · "Repair To Replacement"
+"Coatings + Flat Roofs" · "Clear Inspection Process"
+Each card: small icon+label+1-line description Thin 1px border top and bottom. Compact padding.</span><span class="pk">SECTION 04 — ROOF HEALTH DIAGNOSTIC [SIGNATURE SECTION]</span><span class="pv">Background: storm-charcoal Eyebrow: "Get A Clear Read On Your Roof"[signal-amber] H2: "Understand Your Roof Before You Commit"[white] Body: "Before you commit to a major roofing decision, understand what is actually
+ happening. Compass Roofing identifies leaks,
+surface wear,
+drainage issues,
+storm-readiness concerns,
+and whether repair,
+coating,
+or replacement makes the most sense for your property."  [white 60%]
+
+6 Glass Dashboard Cards (frosted, blue-tinted borders): Leak Risk · Roof Age · Surface Wear · Drainage Condition · Storm Readiness · Recommendation Recommendation card uses amber accent border (not the others) Each card: label at top (sky-blue, small caps)+metric or status+1-line description CTA below cards: "Schedule A Roof Inspection"[amber button]</span><span class="pk">SECTION 05 — SERVICES</span><span class="pv">Background: warm-white Eyebrow: "Roofing Services"[signal-amber] H2: "Roofing Services With A Clear Path Forward"[compass-blue] 10 Service Cards (2-column grid on tablet, single row wrapping on desktop): Roof Repair · Roof Replacement · Residential Roofing · Commercial Roofing Roof Installation · Roof Renovation · Roof Inspections · Roof Coatings Flat Roof Solutions · Emergency Roof Repair Each card: - Service image (4:3 ratio) - Service type tag (sky-blue for standard, amber for Emergency) - H3: Service Name - 2–3 sentences of real crawlable body copy describing the service - Link: "Learn About [Service Name] →" → /services/[slug]/ Below grid: "View All Roofing Services →" link → /services/</span><span class="pk">SECTION 06 — EDUCATION (REPAIR VS COATING VS REPLACE)</span><span class="pv">Background: soft-gray Eyebrow: "Know Your Options"[signal-amber] H2: "Not Every Roof Problem Needs A New Roof"[compass-blue] Body: "Some roofing issues can be handled with a targeted repair. Others may call
+ for a coating,
+restoration,
+or full replacement. The right answer starts with a clear inspection and an honest recommendation."
+
+5 Horizontal Cards (scroll on mobile): Repair — Coating — Restoration — Replacement — Commercial Maintenance Each card: option name+when it makes sense (2–3 sentences)+relevant service link Purpose: reduce homeowner anxiety,
+build trust before asking for a call</span><span class="pk">SECTION 07 — RESIDENTIAL / COMMERCIAL SPLIT</span><span class="pv">Two-column equal-split card layout: Left Card — "For Homeowners": Background: compass-blue H3: "For Homeowners"
+Body: "Clear inspections, repairs, replacements, and roofing solutions
+ for South Florida homes."
+ CTA: "Protect Your Home" → /services/residential-roofing/ Right Card — "For Property Owners": Background: storm-charcoal H3: "For Property Owners"
+Body: "Commercial roofing, coatings, flat roof solutions, and repair
+ planning for Broward County business properties."
+ CTA: "Plan A Commercial Roof Project" → /services/commercial-roofing/</span><span class="pk">SECTION 08 — SOUTH FLORIDA CONDITIONS</span><span class="pv">Background: storm-charcoal (or deep blue gradient) Eyebrow: "Built For Where You Live"[signal-amber] H2: "Built For South Florida Conditions"[white] Body: "Heat, rain, wind, and age all put pressure on your roof. Compass Roofing
+ helps property owners choose solutions built for the conditions South Florida actually faces."  [white 60%]
+
+7 Glass Cards (frosted, metallic silver borders): Heavy Rain · Hurricane Season · UV Exposure · Flat Roof Drainage Tile &amp;
+Shingle Wear · Commercial Roof Protection · Long-Term Property Value Each card: icon+condition name+1-sentence description</span><span class="pk">SECTION 09 — RECENT PROJECTS</span><span class="pv">Background: warm-white Eyebrow: "Our Work"[signal-amber] H2: "Recent Roof Work Across South Florida"[compass-blue] 3–4 Project Cards: - Project image (3:2 ratio, lazy-loaded) - City tag [HTML overlay — NOT baked into image] - Roof type tag [HTML overlay] - Service performed - "View Project →" link → /projects/[slug]/ Below grid: "View All Projects →" → /projects/</span><span class="pk">SECTION 10 — REVIEWS</span><span class="pv">Background: warm-white or very light blue-gray Eyebrow: "What Clients Say"[signal-amber] H2: "Peace Of Mind Starts At The Roofline"[compass-blue] 3 Review Cards (frosted glass treatment): - Star rating (amber stars, crawlable text) - Customer name+city - Review text (crawlable HTML — not JS-only render) - Project type+service performed "View All Reviews →" link → /reviews/ or Google review page</span><span class="pk">SECTION 11 — SERVICE AREAS</span><span class="pv">Background: soft-gray H2: "Roofing Services Across South Florida"[compass-blue] City Grid: 4 columns — 20 cities minimum Each city: pill or card link → /service-areas/[city]-roofing/ Cities (all must be crawlable HTML links, not JS-rendered): Fort Lauderdale · Hollywood · Coral Springs · Pompano Beach · Plantation Davie · Weston · Pembroke Pines · Miramar · Deerfield Beach Boca Raton · Sunrise · Lauderhill · Tamarac · Wilton Manors Oakland Park · Margate · Coconut Creek · Parkland · Miami</span><span class="pk">SECTION 12 — FAQ</span><span class="pv">Background: warm-white H2: "Common Roofing Questions"[compass-blue] Format: Accordion. All content crawlable HTML. FAQPage schema applied. Questions: Q: How do I know if I need roof repair or replacement? Q: How often should I have my roof inspected in South Florida? Q: Are roof coatings a good option for flat roofs in Florida? Q: What are signs of roof damage after heavy rain? Q: Do you handle both residential and commercial roofs? Q: What should I do if I have an active roof leak right now? Q: How long does a roof last in South Florida? Q: Do you serve all of Broward County?</span><span class="pk">SECTION 13 — FINAL CTA</span><span class="pv">Background: storm-charcoal (or deep blue gradient) H2: "Not Sure If You Need A Repair Or Replacement?"[white] Body: "Start with a clear roof inspection. Get honest answers, understand your
+ options,
+and know where your roof stands before committing to a major roofing project."  [white 60%]
+ CTA Row: [Schedule Roof Inspection — amber] [Call Compass Roofing — ghost]</span><span class="pk">SECTION 14 — FOOTER</span><span class="pv">Background: deep-charcoal Column 1 — Brand: Compass Roofing logo (white version) Tagline: "Clear Direction. Stronger Roofs."
+License number Copyright Column 2 — Services: Roof Repair · Roof Replacement · Residential Roofing · Commercial Roofing Flat Roofing · Roof Coatings · Roof Inspections · Emergency Roof Repair Column 3 — Service Areas: Fort Lauderdale · Hollywood · Coral Springs · Pompano Beach · Plantation Davie · Weston · Pembroke Pines · Boca Raton · Miramar Column 4 — Contact: (954) XXX-XXXX [tel: link] [Email address] Service Area: Broward County &amp;
+South Florida Hours: Mon–Sat 7am–6pm [Google Review link] [GBP link] Bottom bar: Privacy Policy · Terms · [License #] · [Social icons] IMPORTANT: NAP (Name, Address/Service Area, Phone) must match Google Business Profile exactly.</span><span class="ph">─────────────────────────────────────────────────────── PAGE TEMPLATES ───────────────────────────────────────────────────────</span><span class="pk">SERVICE PAGE TEMPLATE</span><span class="pv">(10 pages — /services/[slug]/)</span><span class="pv">Hero (H1="[Service Name] In South Florida") → Service Overview (2–3 paragraphs, real crawlable copy) → Who Needs This / Warning Signs → Our Process (numbered steps, real descriptions) → Related Roof Types (linked cards) → Recent Project Examples (2–3 cards) → Review Snippets (2 reviews relevant to this service) → Serving These Areas (city links, 10+ cities) → FAQ (6–8 service-specific questions, FAQPage schema) → Inspection CTA (final section)</span><span class="pk">LOCATION PAGE TEMPLATE</span><span class="pv">(20 pages — /service-areas/[city]-roofing/)</span><span class="pv">City Hero (H1="Roofing Company In [City], FL") → Local Intro (city-specific copy — reference actual neighborhoods, conditions, property types) → Services Available In [City] (all 10 services, linked) → Local Roofing Conditions (city-specific weather, storm exposure, common roof types in area) → Recent Project In [City] (1–2 project cards tagged to this city) → Nearby Service Areas (4–6 adjacent city links) → Reviews (reviews mentioning this city or area where possible) → FAQ (city-specific questions) → Inspection CTA CRITICAL: Every location page must contain meaningful city-specific content. Do NOT generate thin duplicated pages. Reference real local details.</span><span class="pk">ROOF TYPE PAGE TEMPLATE</span><span class="pv">(4 pages — /roof-types/[slug]/)</span><span class="pv">Roof Type Hero (H1="[Type] Roofing In South Florida") → Roof Type Overview (material, common uses, lifespan in Florida) → Common Problems In South Florida → Repair / Coating / Restoration / Replacement Options → South Florida-Specific Considerations (UV, heat, hurricane rating) → Related Services (linked) → Project Examples → FAQ → Inspection CTA</span><span class="pk">PROJECT PAGE TEMPLATE</span><span class="pv">(growing — /projects/[slug]/)</span><span class="pv">Hero image (full-bleed, lazy-loaded) → Project Summary Card: Location · Property Type · Roof Type · Service Performed · Problem · Solution · Result → Before/After Gallery (lazy-loaded, WebP) → Related Services (2–3 linked cards) → City Page Link ("More Roofing Projects In [City] →") → Inspection CTA</span><span class="pk">RESOURCE PAGE TEMPLATE</span><span class="pv">(10 pages — /resources/[slug]/)</span><span class="pv">Article Hero (editorial image, H1=article title) → Intro paragraph (establishes search intent, 100–150 words) → Table of Contents (linked anchors) → Main Article Content (H2/H3 sections, callout boxes, real helpful information) → Related Services (minimum 2 internal links to service pages) → Related Articles (2–3 resource cards) → FAQ (article-specific, FAQPage schema) → Inspection CTA NOTE: Each resource page must link to at least 2 service pages and include 1 CTA. Resource pages drive both organic traffic and warm leads.</span><span class="ph">─────────────────────────────────────────────────────── SEO REQUIREMENTS ───────────────────────────────────────────────────────</span><span class="pv">— One H1 per page. Semantically accurate. Never use H tags for visual styling only. — All body text,
+service descriptions,
+reviews,
+city names: crawlable HTML. Not JS-rendered. — Title tag pattern: "[Service/Topic] In [City] | Compass Roofing | South Florida"
+— Meta descriptions: 150–160 characters. Include service,
+location,
+and action phrase. — Breadcrumbs: all interior pages. Apply BreadcrumbList schema. — Schema: LocalBusiness+RoofingContractor on homepage. Service schema per service page. FAQPage schema on all FAQ sections. WebSite schema on homepage. — Canonical URLs: set on all pages. No URL parameters in canonicals. — XML sitemap: auto-generated,
+covering all 80+pages. Submit to Search Console. — Images: WebP format. Descriptive filenames (city-service.webp). Alt text on all images. — Lazy load: all images below the fold on project,
+gallery,
+and resource pages. — Internal linking: homepage → services → cities → projects → resources. Footer must include core services and major city pages. — NAP: Name,
+Address/Service Area,
+Phone consistent in footer on every page. Must match Google Business Profile exactly. — Heading hierarchy: H1 → H2 → H3 — never skip levels.</span><span class="ph">─────────────────────────────────────────────────────── CONVERSION REQUIREMENTS ───────────────────────────────────────────────────────</span><span class="pv">— Primary CTA on every page: "Schedule Roof Inspection"
+— Short inspection form on every page (7 fields — see spec above) — Full estimate form on /contact/ and /estimate/ pages (12 fields) — Sticky mobile CTA bar: two buttons — "Call Now"+"Schedule Inspection"
+Bar hides behind keyboard when form field is focused — Emergency repair CTA available on relevant pages — amber treatment,
+high urgency — Form reassurance copy near every form: "Not sure what you need? Start with an inspection — no commitment required."
+— Trust signals near every form: local team note,
+review snippet,
+license number — All phone numbers use tel: links. All occurrences,
+not just the header. — GA4 conversion events on: phone click,
+form submit (both types),
+CTA click (by type + location),
+emergency CTA click,
+mobile sticky split (call vs schedule) — UTM passthrough on all form submissions for Osiris One attribution pipeline</span><span class="ph">─────────────────────────────────────────────────────── TECHNICAL REQUIREMENTS ───────────────────────────────────────────────────────</span><span class="pv">— Mobile-first responsive. Breakpoints: 375px / 480px / 768px / 1024px / 1440px — Target LCP under 2.5s on 4G mobile. Core Web Vitals compliant. — Frosted glass effects: CSS backdrop-filter with solid-color fallback. On mobile (&lt; 480px): replace glass effects with solid opaque backgrounds. Reason: backdrop-filter causes jank on mid-tier Android — common in South Florida market. — prefers-reduced-motion: wrap all CSS animations. — Fonts: Google Fonts (Montserrat + Inter). font-display: swap to prevent render block. — Scripts: GA4+Meta Pixel load async. Non-critical scripts deferred. — Semantic HTML: header / main / section / article / nav / footer — not div soup. — Accessible: visible focus styles,
+aria-labels on icon-only buttons,
+field labels on forms,
+color contrast minimum AA (4.5:1 for body text). — Navigation must be crawlable without JavaScript. — No important content inside images. Service names,
+city names,
+reviews=HTML text. — Images: WebP with JPEG/PNG fallback for older browsers. — Form fields: minimum 48px height on mobile. Phone field type="tel" . Email field type="email" . — No layout shift (CLS &lt; 0.1). Reserve space for images before they load. — Hero background image: preload in &lt;
+head&gt;
+for LCP optimization.</span><span class="ph">─────────────────────────────────────────────────────── MATERIAL / GLASS TREATMENT NOTES ───────────────────────────────────────────────────────</span><span class="pv">Glass effects should reference real roofing materials,
+not generic UI trends. Storm Blue Glass: Deep blue-tinted frosted panels. Hero overlays and diagnostic cards. Brushed Aluminum: Silver-gray metallic. Card edges,
+dividers,
+icon fills. Standing-Seam Metal: Vertical line patterns. Background textures,
+section dividers. Blueprint Overlay: Subtle compass grid pattern (5% opacity). Hero background. Storm Radar Glow: Radial blue-gray gradient. Hero and conditions section backgrounds. Metallic Borders: 0.5–1px borders in brushed-silver. Frosted cards and diagnostic panels. Application rule: every glass or metallic element must connect to a roofing concept. If removing it doesn't hurt the roofing message, it shouldn' t be there.</span><span class="ph">═══════════════════════════════════════════════════════ END OF COMPASS ROOFING ANTIGRAVITY BUILD BRIEF Zeus Media — compassroofing.com ═══════════════════════════════════════════════════════</span></div></div></div>< !-- /doc-body --></body></html>
