@@ -435,7 +435,7 @@ export default function Home() {
                 Not Sure If You Need A Repair Or Replacement?
               </h2>
               <p className={styles.leadDescription}>
-                Don\'t let roof anxiety dictate your budget. Get a clear roof inspection first. We\'ll diagnose active leaks, check structural straps, and present you with options—whether it\'s a targeted repair, a protective coating, or a replacement.
+                {"Don't let roof anxiety dictate your budget. Get a clear roof inspection first. We'll diagnose active leaks, check structural straps, and present you with options—whether it's a targeted repair, a protective coating, or a replacement."}
               </p>
               <div className={styles.leadPoints}>
                 <div className={styles.leadPoint}>

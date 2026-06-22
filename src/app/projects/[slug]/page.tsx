@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, FileText, MapPin, Wrench } from 'lucide-react';
+import { ArrowLeft, FileText, MapPin, Wrench } from 'lucide-react';
 import { projectsData } from '@/data/sitemapData';
 import styles from './page.module.css';
 

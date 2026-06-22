@@ -29,7 +29,7 @@ export default function AboutPage() {
             <div>
               <h2 className={styles.heading}>The Compass Story</h2>
               <p className={styles.text}>
-                Founded in Broward County, Compass Roofing was established to remove the anxiety from roofing projects. Most property owners delay roofing decisions because they don\'t know if they need a minor repair or a complete replacement.
+                {"Founded in Broward County, Compass Roofing was established to remove the anxiety from roofing projects. Most property owners delay roofing decisions because they don't know if they need a minor repair or a complete replacement."}
               </p>
               <p className={styles.text}>
                 We built our brand around a simple promise: <strong>&ldquo;Know Where Your Roof Stands.&rdquo;</strong> We start every project with a detailed diagnostic inspection, providing photo evidence and clear options so you can choose the path that makes the most sense for your budget and timeline.

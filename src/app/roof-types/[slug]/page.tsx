@@ -58,7 +58,7 @@ export default async function RoofTypePage({ params }: PageProps) {
 
               <h2 className={styles.heading} style={{ marginTop: '40px' }}>Common Issues to Monitor</h2>
               <p className={styles.text}>
-                Florida\'s climate puts immense stress on roofing substrates. Keep an eye out for these typical wear patterns:
+                {"Florida's climate puts immense stress on roofing substrates. Keep an eye out for these typical wear patterns:"}
               </p>
               <ul className={styles.symptomsList}>
                 {roof.symptoms.map((symptom, idx) => (

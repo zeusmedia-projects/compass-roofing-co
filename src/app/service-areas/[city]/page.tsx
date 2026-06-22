@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, MapPin, CloudLightning, ShieldAlert, Sparkles } from 'lucide-react';
+import { ArrowLeft, MapPin, CloudLightning, Sparkles } from 'lucide-react';
 import { citiesData } from '@/data/sitemapData';
 import styles from './page.module.css';
 
