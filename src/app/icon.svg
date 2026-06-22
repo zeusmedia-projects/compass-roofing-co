@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Premium rounded square background in Compass Blue -->
+  <rect width="512" height="512" rx="112" fill="#1B3A6B" />
+  
+  <!-- Logo mark scaled and centered -->
+  <g transform="translate(256, 256) scale(7) translate(-36, -36)">
+    <!-- White C mark -->
+    <path d="M38 12 A28 28 0 1 0 38 60 L38 50 A18 18 0 1 1 38 22 Z" fill="#ffffff" />
+    <!-- Red compass needle tip -->
+    <polygon points="36,20 40,36 36,32 32,36" fill="#AA0808" />
+    <!-- Silver compass needle tail (using high-contrast Metallic Light) -->
+    <polygon points="36,52 40,36 36,40 32,36" fill="#C4C8D4" />
+  </g>
+</svg>
